@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+      .w3-row-padding img {margin-bottom: 12px}
+      .bgimg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100%;
+      }
+      .imp {
+        color: #000;
+        font-size: 20px;
+        text-align: left;
+      
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .halfed {
+        width: 49.99%;
+      }
+      
+      @media (max-width: 1200px) {
+        .flex-container {
+          flex-direction: column;
+        }
+        .halfed {
+          width: 100%;
+        }
+      }
+
+      @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
