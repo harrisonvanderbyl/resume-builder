@@ -95,35 +95,23 @@ export const skills = {
 
 export const resume: Resume<keyof typeof skills> = {
   Age: "24",
-  Name: "Harrison Vanderbyl",
-  Contact: "Harrison.Vanderbyl@gmail.com",
-  Description:
-    "Software Engineer with a passion for machine learning and high performance computing.",
-  Education: [
-    {
-      degree: "High School Diploma",
-      description: "High School Education",
-      endDate: "2016",
-      school: "Mullumbimby High School",
-      skills: ["Programming", "Math"],
-      startDate: "2010",
-    },
-  ],
+  Name: "John Doe",
+  Contact: "Example@gmail.com",
+  Description: "A person who loves doing things",
+  Education: [],
   Skills: skills,
   Experience: [
     {
-      company: "Techist",
-      description:
-        "Creating scheduling software for the transportation industry",
+      company: "Company 1",
+      description: "Doing Company stuff",
       endDate: "2021",
       startDate: "2020",
       position: "Junior Software Engineer",
       skills: ["Programming", "Javascript", "Typescript", "Node"],
     },
     {
-      company: "Argenti",
-      description:
-        "Software Consultancy, providing software support for clients",
+      company: "Company 2",
+      description: "Doing other company stuff",
       endDate: "-",
       startDate: "2021",
       position: "Software Engineer",
@@ -141,27 +129,25 @@ export const resume: Resume<keyof typeof skills> = {
   Portfolio: {
     projects: [
       {
-        name: "RWKV-CPP-ACCELERATED",
-        description:
-          "A C++ framework for accelerated AI inference on CUDA, Vulkan, and HIP",
+        name: "Project example  1",
+        description: "Project example  1",
         skills: ["Programming", "C++", "CUDA", "Vulkan", "HIP"],
         image: "https://wiki.rwkv.com/assets/rwkv-avartar-256p-4e6660ec.png",
-        url: "https://github.com/harrisonvanderbyl/rwkv-cpp-accelerated",
+        url: "https://github.com/example/project",
       },
       {
-        name: "Rwkvstic",
-        description:
-          "A python framework for accelerated AI inference using multiple backends",
+        name: "Project Example 2",
+        description: "A Project",
         skills: ["Programming", "Python", "PyTorch", "TensorFlow", "ONNX"],
         image: "https://wiki.rwkv.com/assets/rwkv-avartar-256p-4e6660ec.png",
-        url: "https://github.com/harrisonvanderbyl/rwkvstic",
+        url: "https://github.com/example/project",
       },
       {
-        name: "RWKV-Onnx",
-        description: "A python framework for creating robust onnx models",
+        name: "example-Onnx",
+        description: "Another example project",
         skills: ["Programming", "Python", "ONNX", "C++"],
         image: "https://wiki.rwkv.com/assets/rwkv-avartar-256p-4e6660ec.png",
-        url: "https://github.com/RWKV/RWKV-Onnx",
+        url: "https://github.com/Example/project",
       },
     ],
   },
