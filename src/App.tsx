@@ -10,6 +10,8 @@ function App() {
   const [showSidebar, setShowSidebar] = React.useState(false);
   const [hoverObj, setHoverObj] = React.useState("");
 
+  const isMobile = window.innerWidth < 768;
+
   return (
     <html>
       <head>
@@ -192,22 +194,31 @@ function App() {
                         style={{
                           position: "absolute",
                           ...// if the skill is in the right half of the screen, show the tooltip on the left
-                          (window.innerWidth / 2 >
-                          (document
-                            .getElementById(skill + "-tooltip")
-                            ?.getBoundingClientRect()?.x ?? 0) +
-                            (document
-                              .getElementById(skill + "-tooltip")
-                              ?.getBoundingClientRect().width ?? 0) /
-                              2
+
+                          (isMobile
+                            ? {
+                                left: "-50%",
+                                top: "110%",
+                              }
+                            : window.innerWidth / 2 >
+                              (document
+                                .getElementById(skill + "-tooltip")
+                                ?.getBoundingClientRect()?.x ?? 0) +
+                                (document
+                                  .getElementById(skill + "-tooltip")
+                                  ?.getBoundingClientRect().width ?? 0) /
+                                  2
                             ? {
                                 left: "110%",
+                                top: "50%",
+                                transform: "translate(0, -50%)",
                               }
                             : {
                                 right: "110%",
+                                top: "50%",
+                                transform: "translate(0, -50%)",
                               }),
-                          top: "50%",
-                          transform: "translate(0, -50%)",
+
                           padding: "10px",
                           backgroundColor: "#eee",
                           borderRadius: "5px",
@@ -279,7 +290,7 @@ function App() {
               id="portfolio"
               title="Portfolio"
               className="halfed"
-              columns={2}
+              columns={isMobile ? 1 : 2}
             >
               {/* <!-- Grid for photos -->*/}
               {resume.Portfolio.projects.map((project) => (
